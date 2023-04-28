@@ -73,6 +73,7 @@ The current list of boards that have been tested and are supported can be obtain
     ├── nexys4ddr
     ├── nexys_video
     ├── orangecrab
+    ├── pano_logic_g2
     ├── pipistrello
     ├── qmtech_ep4ce15
     ├── qmtech_ep4ce55
