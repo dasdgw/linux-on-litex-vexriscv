@@ -385,11 +385,14 @@ class DecklinkQuadHDMIRecorder(Board):
         })
 
 # pano logic g2 support -----------------------------------------------------------------------------------
+
 class PanoLogicG2(Board):
-    #soc_kwargs = {"sys_clk_freq" : int(50e6) }
-    soc_kwargs = {"l2_size" : 2048, # Use Wishbone and L2 for memory accesses.
-            "video_timing" : "640x480@60Hz"}
-            #soc_kwargs = {"l2_size" : 8192} # Use Wishbone and L2 for memory accesses.
+    soc_kwargs = {
+        #"sys_clk_freq" : int(50e6),
+        "l2_size" : 2048, # Use Wishbone and L2 for memory accesses.
+        #"l2_size" : 8192, # Use Wishbone and L2 for memory accesses.
+        "video_timing" : "640x480@60Hz"
+    }
     def __init__(self):
         from litex_boards.targets import pano_logic_g2
         Board.__init__(self, pano_logic_g2.BaseSoC, soc_capabilities={
